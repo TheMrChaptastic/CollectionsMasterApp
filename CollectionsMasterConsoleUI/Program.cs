@@ -40,7 +40,7 @@ namespace CollectionsMasterConsoleUI
 
             //Create a method that will set numbers that are a multiple of 3 to zero then print to the console all numbers
             ThreeKiller(iArr);
-            Console.WriteLine($"Multiple of three = {iArr.Length}: ");
+            Console.WriteLine($"Multiple of three = 0: ");
             NumberPrinter(iArr);
 
             Console.WriteLine("-------------------");
