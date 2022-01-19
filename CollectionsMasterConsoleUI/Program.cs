@@ -35,7 +35,8 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine("All Numbers Reversed:");
             NumberPrinter(iArr);
             Console.WriteLine("---------REVERSE CUSTOM------------");
-
+            ReverseArray(iArr);
+            NumberPrinter(iArr);
             Console.WriteLine("-------------------");
 
             //Create a method that will set numbers that are a multiple of 3 to zero then print to the console all numbers
@@ -149,7 +150,6 @@ namespace CollectionsMasterConsoleUI
         private static void Populater(List<int> numberList)
         {
             Random rng = new Random();
-            var temp = 0;
             for (int i = 0; i < 50; i++)
             {
                 numberList.Add(rng.Next(50));
@@ -167,7 +167,12 @@ namespace CollectionsMasterConsoleUI
 
         private static void ReverseArray(int[] array)
         {
-            //Used .Sort();
+            for(int i = 0; i < array.Length / 2; i++)
+            {
+                var temp = array[i];
+                array[i] = array[array.Length - 1 - i];
+                array[array.Length - 1 - i] = temp;
+            }
         }
 
         /// <summary>
